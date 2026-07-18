@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+echo "🔎 Validating commit message..."
+
+npx --no -- commitlint --edit "$1"
+
+echo "✅ Commit message accepted"

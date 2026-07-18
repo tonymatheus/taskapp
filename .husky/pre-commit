@@ -1,0 +1,9 @@
+#npm test
+
+#!/usr/bin/env sh
+
+echo "🚀 Running lint-staged..."
+
+yarn lint-staged
+
+echo "✅ Code quality checks passed"
