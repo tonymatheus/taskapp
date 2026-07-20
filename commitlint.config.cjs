@@ -1,7 +1,5 @@
 module.exports = {
-  extends: [
-    '@commitlint/config-conventional'
-  ],
+  extends: ['@commitlint/config-conventional'],
 
   rules: {
     'scope-enum': [
@@ -17,8 +15,8 @@ module.exports = {
         'core',
         'deps',
         'config',
-        'docs'
-      ]
-    ]
-  }
+        'docs',
+      ],
+    ],
+  },
 };
