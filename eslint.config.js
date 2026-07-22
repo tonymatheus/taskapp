@@ -41,8 +41,43 @@ module.exports = tseslint.config(
 
       'react-native/no-inline-styles': 'warn',
 
-      'prefer-const': 'error',
+      '@typescript-eslint/typedef': [
+        'warn',
+        {
+          parameter: true,
+          propertyDeclaration: true,
+          memberVariableDeclaration: true,
+          variableDeclaration: false,
+          variableDeclarationIgnoreFunction: true,
+          objectDestructuring: false,
+          arrayDestructuring: false,
+        },
+      ],
 
+      '@typescript-eslint/explicit-function-return-type': [
+        'warn',
+        {
+          allowExpressions: true,
+          allowTypedFunctionExpressions: true,
+        },
+      ],
+
+      '@typescript-eslint/consistent-type-imports': [
+        'warn',
+        {
+          prefer: 'type-imports',
+        },
+      ],
+
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
+
+      'prefer-const': 'error',
       'no-console': 'warn',
     },
   },
