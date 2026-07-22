@@ -1,4 +1,4 @@
-import { TaskRepository } from '@domain/domainRepositories';
+import type { TaskRepository } from '@domain/domainRepositories';
 
 export const createDeleteTaskUseCase = (repository: TaskRepository) => {
   return async (id: string): Promise<void> => {
