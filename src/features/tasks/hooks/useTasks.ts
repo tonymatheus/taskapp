@@ -1,8 +1,8 @@
 import { useCallback, useState } from 'react';
 
 import { taskUseCases } from '@app/container';
-import { Task } from '@domain/entities';
-import { CreateTaskInput } from '@domain/useCases/types';
+import type { Task } from '@domain/entities';
+import type { CreateTaskInput } from '@domain/useCases/types';
 
 export const useTasks = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -36,12 +36,24 @@ export const useTasks = () => {
     [loadTasks],
   );
 
+  const toggleTask = useCallback(
+    async (task: Task) => {
+      await updateTask({
+        ...task,
+        status: task.status === 'pending' ? 'completed' : 'pending',
+        updatedAt: Date.now(),
+      });
+    },
+    [updateTask],
+  );
+
   return {
     tasks,
     createTask,
     updateTask,
     loadTasks,
     deleteTask,
+    toggleTask,
     reload: loadTasks,
   };
 };
