@@ -1,5 +1,5 @@
-import { Task } from '@domain/entities';
-import { TaskRepository } from '@domain/domainRepositories';
+import type { Task } from '@domain/entities';
+import type { TaskRepository } from '@domain/domainRepositories';
 
 import { storage } from '@infrastructure/storage/mmkv';
 import { STORAGE_KEYS } from '@config/constants';
