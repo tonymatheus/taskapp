@@ -1,5 +1,5 @@
-import { CreateTaskInput } from '@domain/useCases/types';
-import { Task } from './Task';
+import type { CreateTaskInput } from '@domain/useCases/types';
+import type { Task } from './Task';
 
 import { v4 as uuid } from 'uuid';
 

@@ -1,4 +1,4 @@
-import { Task } from '@domain/entities';
+import type { Task } from '@domain/entities';
 
 export interface TaskRepository {
   getTasks(): Promise<Task[]>;
