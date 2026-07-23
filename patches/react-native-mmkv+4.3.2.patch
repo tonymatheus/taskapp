@@ -1,0 +1,10 @@
+diff --git a/node_modules/react-native-mmkv/android/CMakeLists.txt b/node_modules/react-native-mmkv/android/CMakeLists.txt
+index 8d02c1e..cd410f2 100644
+--- a/node_modules/react-native-mmkv/android/CMakeLists.txt
++++ b/node_modules/react-native-mmkv/android/CMakeLists.txt
+@@ -44,4 +44,5 @@ target_link_libraries(
+         ${LOG_LIB}
+         mmkv::mmkv                  # <-- MMKV core
+         android                     # <-- Android core
++        c++_shared                  # <-- Fix: link libc++_shared explicitly for NDK 27
+ )

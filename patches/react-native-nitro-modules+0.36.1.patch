@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-nitro-modules/android/CMakeLists.txt b/node_modules/react-native-nitro-modules/android/CMakeLists.txt
+index ea389a8..dc7cdfe 100644
+--- a/node_modules/react-native-nitro-modules/android/CMakeLists.txt
++++ b/node_modules/react-native-nitro-modules/android/CMakeLists.txt
+@@ -63,6 +63,7 @@ target_link_libraries(
+         android                                   # <-- Android JNI core
+         fbjni::fbjni                              # <-- Facebook C++ JNI helpers
+         ReactAndroid::jsi                         # <-- RN: JSI
++        c++_shared                                # <-- Fix: link libc++_shared explicitly for NDK 27
+ )
+ 
+ # Link react-native (different prefab between RN 0.75 and RN 0.76)
