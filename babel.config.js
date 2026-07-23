@@ -29,7 +29,9 @@ module.exports = {
 
           '@features': './src/features',
 
+          '@infraRepositories': './src/infrastructure/repositories',
           '@repositories': './src/infrastructure/repositories',
+          '@infrastructure': './src/infrastructure',
           '@storage': './src/infrastructure/storage',
 
           '@components': './src/shared/components',
