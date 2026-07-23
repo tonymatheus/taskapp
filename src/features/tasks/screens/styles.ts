@@ -5,6 +5,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
+  ViewTitleContainer: {
+    alignItems: 'center',
+  },
   title: {
     fontSize: 28,
     fontWeight: '700',
